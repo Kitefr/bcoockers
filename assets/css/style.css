@@ -1,0 +1,18 @@
+.back {
+    background-color:grey;
+}
+.dropdown {
+    margin-top: 2%;
+    width: 500px;
+}
+.nmephne {/*problème pour réduire la taille de l'input*/
+    margin-right: 0%;
+}
+.txtarea {
+    margin-top : 2%;
+    margin-left : 0.9%;
+    padding-bottom: 20%;
+}
+.datepcker{
+    background-color: white;
+}
