@@ -11,11 +11,13 @@ Les branches `master` et `develop` sont utilisable uniquement en PR.
 Il y a 3 autres branches nommées `feature`, `release` et `hotfix`.
 Ces 3 branches sont utilisées en fait comme dossiers pour contenir les branches que l'on va créer.
 
-Si vous voulez créer une **feature**, il suffit de mettre `feature` dans le nom avant celle-ci.  
-Par exemple: 
-```
+Si vous voulez créer une **feature**, il suffit de mettre `feature` dans le nom avant celle-ci.
+Par exemple:
+
+``` bash
 git branch feature/section-contact
 ```
+
 Cela créera une sous-branche `section-contact` dans la branche `feature`.
 
 Il en va de même pour les 2 autre branches.
