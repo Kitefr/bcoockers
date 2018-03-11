@@ -32,11 +32,51 @@ Il en va de même pour les 2 autre branches.
 6. Faire des commits le plus régulièrement possible.
 7. On push sur la `develop` le soir avant de partir.
 
-## A propos du CSS
+## Usage
 
-J'étais partie sur un système de fichier nommé Stylus mais il peut-etre intimidant à utiliser au premier abord.
-Nous allons donc utiliser le système CSS de base.
+Ce projet utilise node. Pas parce qu'il en a besoin mais par facilité.
+Il utilise en faire un système nommé Gulp.
 
-Je vais prefaire les fichiers pour que tout soit okay, vous n'aurez plus qu'a selectionner le fichier adéquate pour la section sur laquelle vous travaillez.
+Gulp permet d'automatiser des taches comme la gesion des fichiers css et js, la copies et l'optimisation d'image et bien d'autre choses.
 
-Une fois que tout sera okay, on fera changera cela en un seul fichier css unique pour faire plus pro.
+Mais j'ai pensé à vous !
+
+Pour l'utilisation, rien de plus simple.
+
+1. Aller dans le dossier du projet git. Verifier que celui-ci a bien un fichier `gulpfile.js`
+2. Il devrai y avoir un fichier `package.json` aussi. Faite comme suit pour installer toutes les dépendences du projet.
+
+```bash
+npm install
+```
+
+3. Pour lancer le serveur de developmement, faite la commande suivante et laisser tourner.
+
+```bash
+npm run dev
+```
+
+### HTML
+
+Gulp permet de faire des modification mineur sur le html en vu de le distribuer au client.
+
+### CSS
+
+Le plus gros du travail se situe pour le css.
+Nous utilisons un système nommé Stylus. 
+
+Stylus permet de coder su css avec des variables et des functions ce qui est plus pratique. 
+Mais ce qui est bien avec stylus, c'est qu'il reconnait aussi le css basique donc vous ne serai pas perdu :)
+
+Gulp, ici, permet de merger tous les fichiers stylus en un seul fichier css que l'on utilisera sur le site.
+
+Pour la distribtion client, gulp s'occupe de vérifier le fichier et l'optimise pour gagner de la place et faire en sorte que celui-ci tourne sur la plupart des navigateurs actuels.
+
+### JS
+
+[ATTENTION] Il s'agit d'un systeme experimental. Je ne l'ai pas tester avec jQuery.
+Il n'y a cependant aucune perte de données possible.
+
+Pour Js, tous les fichiers javascript dans le dossier js de `src` seront merger ensemble.
+
+Pour la distribution client, le fichier resultant sera traité pour être optimisé.
