@@ -9,6 +9,7 @@ const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const replace = require("gulp-html-replace");
 const concat = require("gulp-concat");
+const inlinesource = require("gulp-inline-source");
 const del = require("del");
 const runSequence = require("run-sequence");
 const browserSync = require("browser-sync").create();
@@ -84,8 +85,15 @@ gulp.task("fonts", () => {
     return gulp.src("./src/fonts/*").pipe(gulp.dest("./dist/fonts/"));
 });
 
+gulp.task("svg:inline", () => {
+    return gulp
+        .src("./src/index.html")
+        .pipe(inlinesource())
+        .pipe(gulp.dest("./src/"));
+});
+
 // Realod the browser on change
-gulp.task("server", function() {
+gulp.task("server", () => {
     browserSync.init({
         server: {
             baseDir: "./src"
@@ -94,19 +102,20 @@ gulp.task("server", function() {
 });
 
 // Clean dist
-gulp.task("clean:dist", function() {
+gulp.task("clean:dist", () => {
     return del.sync("./dist");
 });
 
 gulp.task("watch", ["server"], () => {
     gulp.watch("./src/css/stylus/**/*.styl", ["css"]);
     gulp.watch("./src/js/**/*.js", ["js"]);
+    gulp.watch("./src/index.html", ["svg:inline"]);
     gulp.watch("./src/index.html").on("change", browserSync.reload);
 });
 
 // What we will user
 
-gulp.task("default", function() {
+gulp.task("default", () => {
     runSequence("css", "watch", () => {});
 });
 
