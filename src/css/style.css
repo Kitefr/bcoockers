@@ -49,11 +49,3 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
     font-weight: bold;
   }
 }
-/*
- * Temporaire.
- */
-section {
-  background-color: #ffc0cb;
-  margin: 20px 0;
-  height: 50px;
-}
