@@ -1,0 +1,59 @@
+/*
+Les fichiers styl se transformeront en un seul fichier css.
+---
+VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
+*/
+#site-container > footer {
+  font-family: "Poiret One";
+  background-color: #000;
+  color: #fff;
+}
+#site-container > footer .row > .col {
+  margin: 10px 8px;
+}
+#site-container > footer .logo {
+  fill: #cecece;
+}
+#site-container > footer h3 {
+  color: #cecece;
+  font-size: 1.5rem;
+  margin-top: 8px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-bottom: 1px solid #8f8547;
+}
+#site-container > header {
+  height: 50px;
+  font-family: "Poiret One";
+}
+@media screen and (min-width: 768px) {
+  #site-container > header {
+    height: 80px;
+  }
+}
+#site-container > header nav.navbar {
+  background-color: #bbb277 !important;
+}
+@media screen and (min-width: 768px) {
+  #site-container > header nav.navbar {
+    font-size: 1.8rem;
+  }
+  #site-container > header nav.navbar ul li {
+    margin: 0 10px;
+  }
+  #site-container > header nav.navbar ul li a {
+    font-weight: normal;
+    transition: all 0.3s;
+  }
+  #site-container > header nav.navbar ul li a:hover {
+    font-weight: bold;
+  }
+}
+/*
+ * Temporaire.
+ */
+section {
+  background-color: #ffc0cb;
+  margin: 20px 0;
+  height: 50px;
+}

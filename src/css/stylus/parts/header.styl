@@ -1,0 +1,23 @@
+#site-container > header
+    height: 50px;
+    font-family: $font-fancy
+
+    @media screen and (min-width: 768px)
+        height: 80px;
+
+    nav.navbar
+        background-color $color-gold !important
+
+        @media screen and (min-width: 768px)
+            font-size 1.8rem
+
+            ul
+                li
+                    margin 0 10px
+
+                    a
+                        font-weight: normal
+                        transition: all 0.3s
+
+                        &:hover 
+                            font-weight: bold
