@@ -7,20 +7,31 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
   font-family: "Poiret One";
   background-color: #000;
   color: #fff;
-}
-#site-container > footer .row > .col {
-  margin: 10px 8px;
+  border-top: 1px solid #bbb277;
+  padding: 20px 0;
+  text-align: center;
 }
 #site-container > footer .logo {
-  fill: #cecece;
-}
-#site-container > footer h3 {
-  color: #cecece;
-  font-size: 1.5rem;
-  margin-top: 8px;
-  padding-bottom: 5px;
   text-align: center;
-  border-bottom: 1px solid #8f8547;
+  margin-bottom: 15px;
+}
+#site-container > footer .logo img {
+  max-width: 160px;
+  opacity: 0.8;
+}
+#site-container > footer .liens {
+  font-family: Arial, "Sans Serif";
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+#site-container > footer .liens span {
+  color: #bbb277;
+}
+#site-container > footer .liens a {
+  color: #b3b3b3;
+}
+#site-container > footer .liens a:hover {
+  color: #bbb277;
 }
 #site-container > header {
   height: 50px;
