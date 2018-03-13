@@ -2,17 +2,28 @@
     font-family $font-fancy
     background-color $color-black
     color $color-white
-
-    .row > .col
-        margin 10px 8px
+    border-top 1px solid $color-gold
+    padding 20px 0
+    text-align: center
 
     .logo
-        fill lighten(#B9B9B9, 30%)
+        text-align: center
+        margin-bottom: 15px;
+
+        img
+            max-width: 160px
+            opacity 0.8
     
-    h3
-        color $color-gray
-        font-size 1.5rem
-        margin-top 8px
-        padding-bottom 5px
-        text-align center
-        border-bottom 1px solid darken($color-gold, 30%)
+    .liens
+        font-family $font-base
+        font-size 0.9rem
+        color darken($color-white, 30%) 
+
+        span
+            color $color-gold
+
+        a
+            color darken($color-white, 30%) 
+
+            &:hover
+                color $color-gold
