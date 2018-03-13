@@ -1,25 +1,3 @@
-$(document).ready(function() {
-    $("#menu-icon").click(function() {
-        $(this).toggleClass("open");
-        $("#site-container").toggleClass("menu-opened");
-        $("body").toggleClass("menu-opened");
-        $("#navbar-mobile").toggleClass("show");
-        if ($("#logo-header img").attr("src") == "./images/logo_black.png") {
-            $("#logo-header img").attr("src", "./images/logo_white.png");
-        } else {
-            $("#logo-header img").attr("src", "./images/logo_black.png");
-        }
-    });
-
-    $("#navbar-mobile a").click(function() {
-        $("#navbar-mobile").removeClass("show");
-        $("#logo-header img").attr("src", "./images/logo_black.png");
-        $("#site-container").removeClass("menu-opened");
-        $("body").removeClass("menu-opened");
-        $("#menu-icon").removeClass("open");
-    });
-});
-
 //Début formulaire
 
 $.fn.datetimepicker.Constructor.Default = $.extend(
@@ -136,3 +114,61 @@ $("#datetimepicker1").datetimepicker({ sideBySide: true, debug: true });
 $("#datetimepicker1").datetimepicker("sideBySide", true);
 
 //Fin formulaire
+
+$(document).ready(function() {
+    $("#menu-icon").click(function() {
+        $(this).toggleClass("open");
+        $("#site-container").toggleClass("menu-opened");
+        $("body").toggleClass("menu-opened");
+        $("#navbar-mobile").toggleClass("show");
+        if ($("#logo-header img").attr("src") == "./images/logo_black.png") {
+            $("#logo-header img").attr("src", "./images/logo_white.png");
+        } else {
+            $("#logo-header img").attr("src", "./images/logo_black.png");
+        }
+    });
+
+    $("#navbar-mobile a").click(function() {
+        $("#navbar-mobile").removeClass("show");
+        $("#logo-header img").attr("src", "./images/logo_black.png");
+        $("#site-container").removeClass("menu-opened");
+        $("body").removeClass("menu-opened");
+        $("#menu-icon").removeClass("open");
+    });
+});
+
+$(document).ready(function() {
+  $("#buttonCard4").click(function() {
+    $("div.card4Hover").toggle(2000, "swing");
+  });
+  $("div.card4Hover").click(function() {
+    $(this).css({
+      display: "none"
+    });
+  });
+  $("#buttonCard3").click(function() {
+    $("div.card3Hover").toggle(2000, "swing");
+  });
+  $("div.card3Hover").click(function() {
+    $(this).css({
+      display: "none"
+    });
+  });
+
+  $("#buttonCard2").click(function() {
+    $("div.card2Hover").toggle(2000, "swing");
+  });
+  $("div.card2Hover").click(function() {
+    $(this).css({
+      display: "none"
+    });
+  });
+  $("#buttonCard1").click(function() {
+    $("div.card1Hover").toggle(2000, "swing");
+  });
+  $("div.card1Hover").click(function() {
+    $(this).css({
+      display: "none"
+    });
+  });
+});
