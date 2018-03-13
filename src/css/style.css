@@ -24,17 +24,59 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
 }
 #site-container > header {
   height: 50px;
+  overflow: hidden;
   font-family: "Poiret One";
+}
+@media screen and (min-width: 576px) {
+  #site-container > header {
+    height: 68px;
+  }
 }
 @media screen and (min-width: 768px) {
   #site-container > header {
     height: 80px;
   }
 }
+#site-container > header .logo {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  z-index: 40;
+}
+@media screen and (min-width: 576px) {
+  #site-container > header .logo {
+    height: 68px;
+  }
+}
+#site-container > header .logo img {
+  height: 30px;
+  margin-top: 13px;
+  width: auto;
+}
+@media screen and (min-width: 576px) {
+  #site-container > header .logo img {
+    height: 40px;
+    margin-top: 18px;
+  }
+}
 #site-container > header nav.navbar {
   background-color: #bbb277 !important;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+@media screen and (min-width: 576px) {
+  #site-container > header nav.navbar {
+    height: 68px;
+  }
 }
 @media screen and (min-width: 768px) {
+  #site-container > header nav.navbar {
+    font-size: 1.6rem;
+    height: 80px;
+  }
+}
+@media screen and (min-width: 992px) {
   #site-container > header nav.navbar {
     font-size: 1.8rem;
   }
@@ -43,11 +85,120 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
   }
   #site-container > header nav.navbar ul li a {
     font-weight: normal;
-    transition: all 0.3s;
   }
   #site-container > header nav.navbar ul li a:hover {
     font-weight: bold;
   }
+}
+#site-container > header #menu-icon {
+  width: 28px;
+  height: 45px;
+  position: absolute;
+  margin: 10px 0 0 15px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 50;
+}
+@media screen and (min-width: 576px) {
+  #site-container > header #menu-icon {
+    margin: 10px 0 0 20px;
+    width: 32px;
+    height: 45px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #site-container > header #menu-icon {
+    margin: 10px 0 0 26px;
+    display: none;
+  }
+}
+#site-container > header #menu-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+#site-container > header #menu-icon span:nth-child(1) {
+  top: 0px;
+}
+#site-container > header #menu-icon span:nth-child(2),
+#site-container > header #menu-icon span:nth-child(3) {
+  top: 10px;
+}
+#site-container > header #menu-icon span:nth-child(4) {
+  top: 20px;
+}
+#site-container > header #menu-icon.open span:nth-child(1) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+}
+#site-container > header #menu-icon.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+#site-container > header #menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+#site-container > header #menu-icon.open span:nth-child(4) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+}
+#site-container > header #navbar-mobile {
+  top: 0;
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 1;
+  display: none;
+}
+#site-container > header #navbar-mobile.show {
+  display: block;
+}
+#site-container > header #navbar-mobile ul {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+#site-container > header #navbar-mobile ul li {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #524c29;
+}
+#site-container > header #navbar-mobile ul li:last-child {
+  border-bottom: none;
+}
+#site-container > header #navbar-mobile ul li a {
+  color: #999;
+}
+#site-container.menu-opened nav.navbar {
+  background-color: transparent !important;
+}
+#site-container.menu-opened #menu-icon span {
+  background-color: #b1a663;
+  opacity: 0.8;
+}
+#site-container.menu-opened #navbar-mobile {
+  display: block;
+}
+#site-container.menu-opened .logo {
+  opacity: 0.7;
+}
+body.menu-opened {
+  overflow: hidden !important;
 }
 .cont1 {
   padding: 0;
