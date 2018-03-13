@@ -49,10 +49,14 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
     font-weight: bold;
   }
 }
+#blog {
+  background-color: #8f8547;
+}
 h1 {
   font-family: "Poiret One";
   font-size: 40px;
   color: #fff;
+  padding-top: 20px;
 }
 h5 {
   font-family: $Arial;
@@ -61,8 +65,10 @@ h5 {
 }
 p {
   font-family: $Arial;
-  font-size: 12px;
+  font-size: 14px;
   color: #000;
+  white-space: initial;
+  text-overflow: fade;
 }
 .card-img-top {
   width: 100%;
@@ -70,9 +76,22 @@ p {
   overflow: hidden;
 }
 .card-body {
-  height: 60px;
+  height: 8rem;
   overflow: hidden;
   padding-bottom: 50px;
+}
+.card-footer {
+  padding: 8px;
+}
+.container-cards {
+  background-color: #202020;
+}
+.nav-link {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.nav-pills .nav-link.active {
+  background-color: #8f8547;
 }
 /*
  * Temporaire.
@@ -80,5 +99,5 @@ p {
 section {
   background-color: #ffc0cb;
   margin: 20px 0;
-  min-height: 100px;
+  height: 700px;
 }

@@ -1,7 +1,12 @@
+#blog{
+    background-color: #8f8547;
+}
+
 h1{
     font-family $font-fancy
     font-size: 40px;
     color $color-white
+    padding-top: 20px;
 }
 
 h5{
@@ -12,8 +17,11 @@ h5{
 
 p{
     font-family $Arial
-    font-size: 12px;
+    font-size: 14px;
     color $color-black;
+    white-space: initial;
+    text-overflow: fade;	
+
 }
 .card-img-top{
     width: 100%;
@@ -22,7 +30,24 @@ p{
 }
     
 .card-body{
-    height : 60px;
+    height : 8rem;
     overflow: hidden;
     padding-bottom: 50px;
+}
+
+.card-footer{
+    padding: 8px;
+}
+
+.container-cards{
+    background-color: #202020;
+}
+
+.nav-link{
+    color : white;
+    margin-bottom: 20px;
+    }
+
+.nav-pills .nav-link.active{
+    background-color : #8f8547;
 }
