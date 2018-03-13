@@ -49,6 +49,54 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
     font-weight: bold;
   }
 }
+small {
+  font-size: 16px;
+}
+.cont2 {
+  background-color: #000;
+}
+.marginTopCard {
+  margin-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.card {
+  border: solid 1px #8f8547;
+}
+.card-title {
+  font-family: "Poiret One";
+}
+.card-body {
+  background-color: #fefee2;
+  font-family: "Arial";
+  color: #000;
+}
+.card-footer {
+  background-color: #000;
+  color: #8f8547;
+}
+.priceBurgerAlone {
+  float: right;
+  margin-top: 0px;
+}
+.btn {
+  background-color: #000;
+  font-family: "Poiret one";
+  color: #fff !important;
+  border-color: #8f8547;
+  justify-items: center;
+}
+.buttonsCard {
+  display: inline-flex;
+  background-color: #fefee2;
+  justify-content: center;
+}
+#titleNosBurgers {
+  font-family: "Poiret One";
+  font-size: 40px;
+  border-bottom: solid 1px #8f8547;
+  color: #fff;
+  float: right;
+}
 .cont1 {
   padding: 0;
   background-color: #1e1e1e;
@@ -109,6 +157,7 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
   font-family: "Poiret One";
   color: #8f8547;
   background-color: #000;
+  float: right;
 }
 #buttonResa:hover {
   color: #000;
@@ -131,7 +180,7 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
   font-size: 40px;
   color: #fff;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .borderForm {
     height: 50px;
     margin-top: 10px;
