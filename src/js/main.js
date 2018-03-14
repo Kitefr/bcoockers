@@ -12,3 +12,5 @@ $("#comments").click(function() {
   $(".card.recettes, .card.mondeinsectes").hide();
   $(".card.commentaires").show();
 });
+
+$("#recipes").click();
