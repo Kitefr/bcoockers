@@ -65,19 +65,19 @@
                     <h1>Le blog</h1>
                     <div class="card container-cards">
                         <div class="card-header">
-                            <ul class="nav nav-pills card-header-pills">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">Les recettes</a>
+                            <ul class="nav nav-pills flex-column flex-sm-row">
+                                <li class="nav-item" id="recipes">
+                                    <a class="nav-link active">Les recettes</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Autour des insectes</a>
+                                <li class="nav-item" id="insectsworld">
+                                    <a class="nav-link">Autour des insectes</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Commentaires</a>
+                                <li class="nav-item" id="comments">
+                                    <a class="nav-link">Commentaires</a>
                                 </li>
                             </ul>
                             <div class="card-deck mx-auto" style="max-width: 50rem;">
-                                <div class="card">
+                                <div class="card recettes">
                                     <div class="hovereffect">
                                         <img class="card-img-top" src="/images/recette_1.jpg" alt="Card image cap ">
                                     </div>
@@ -92,7 +92,7 @@
                                         <small class="text-muted">Publié le 8 novembre 2017</small>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card recettes">
                                     <div class="hovereffect">
                                         <img class="card-img-top" src="/images/recette_2.jpg" alt="Recette Tacos aux larves de Mezcal ">
                                     </div>
@@ -107,7 +107,7 @@
                                         <small class="text-muted ">Publié le 3 décembre 2017</small>
                                     </div>
                                 </div>
-                                <div class="card ">
+                                <div class="card recettes">
                                     <div class="hovereffect">
                                         <img class="card-img-top " src="/images/recette_3.jpg" alt="Image">
                                     </div>
@@ -123,79 +123,74 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container-fluid">
-                                <h1>Autour des insectes</h1>
-                                <div class="card-deck mx-auto" style="max-width: 50rem; ">
-                                    <div class="card ">
-                                        <div class="hovereffect">
-                                            <img class="card-img-top " src="/images/insecte_1.jpg " alt="boîte de vers ">
-                                        </div>
-                                        <div class="card-body ">
-                                            <h5 class="card-title ">Découvrez les insectes commestibles</h5>
-                                            <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum temporibus
-                                                nobis aliquam sed ullam iure laboriosam molestias accusamus facilis a voluptates
-                                                unde sit dignissimos, modi tempora qui cumque molestiae?
-                                            </p>
-                                        </div>
-                                        <div class="card-footer ">
-                                            <small class="text-muted ">Publié le 12 octobre 2017</small>
-                                        </div>
+                            <div class="card-deck mx-auto" style="max-width: 50rem; ">
+                                <div class="card mondeinsectes">
+                                    <div class="hovereffect">
+                                        <img class="card-img-top " src="/images/insecte_1.jpg " alt="boîte de vers ">
                                     </div>
-                                    <div class="card ">
-                                        <div class="hovereffect">
-                                            <img class="card-img-top " src="/images/insecte_2.jpg " alt="Image ">
-                                        </div>
-                                        <div class="card-body ">
-                                            <h5 class="card-title ">La valeur nutritionelle des insectes</h5>
-                                            <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum temporibus
-                                                nobis aliquam sed ullam iure laboriosam molestias accusamus facilis a voluptates
-                                                unde sit dignissimos, modi tempora qui cumque molestiae?
-                                            </p>
-                                        </div>
-                                        <div class="card-footer ">
-                                            <small class="text-muted ">Publié le 6 décembre 2018</small>
-                                        </div>
+                                    <div class="card-body ">
+                                        <h5 class="card-title ">Découvrez les insectes commestibles</h5>
+                                        <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum temporibus nobis
+                                            aliquam sed ullam iure laboriosam molestias accusamus facilis a voluptates unde
+                                            sit dignissimos, modi tempora qui cumque molestiae?
+                                        </p>
                                     </div>
-                                    <div class="card ">
-                                        <div class="hovereffect">
-                                            <img class="card-img-top " src="/images/insecte_3.jpeg " alt="cricket ">
-                                        </div>
-                                        <div class="card-body ">
-                                            <h5 class="card-title ">Les intérêts de l'élevage d'insectes</h5>
-                                            <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum temporibus
-                                                nobis aliquam sed ullam iure laboriosam molestias accusamus facilis a voluptates
-                                                unde sit dignissimos, modi tempora qui cumque molestiae?
-                                            </p>
-                                        </div>
-                                        <div class="card-footer ">
-                                            <small class="text-muted ">Publié le 18 février 2018</small>
-                                        </div>
+                                    <div class="card-footer ">
+                                        <small class="text-muted ">Publié le 12 octobre 2017</small>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card mx-auto" style="max-width: 50rem;">
-                                <div class="card-header">
-                                    Commentaires
+                                <div class="card mondeinsectes">
+                                    <div class="hovereffect">
+                                        <img class="card-img-top " src="/images/insecte_2.jpg " alt="Image ">
+                                    </div>
+                                    <div class="card-body ">
+                                        <h5 class="card-title ">La valeur nutritionelle des insectes</h5>
+                                        <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum temporibus nobis
+                                            aliquam sed ullam iure laboriosam molestias accusamus facilis a voluptates unde
+                                            sit dignissimos, modi tempora qui cumque molestiae?
+                                        </p>
+                                    </div>
+                                    <div class="card-footer ">
+                                        <small class="text-muted ">Publié le 6 décembre 2018</small>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <blockquote class="blockquote mb-1">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                        <footer class="blockquote-footer">Juliette Bichon
-                                        </footer>
-                                    </blockquote>
-                                    <div class="card-body">
-                                        <blockquote class="blockquote mb-0">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat
-                                                a ante.</p>
-                                            <footer class="blockquote-footer">Juliette Bichon
-                                            </footer>
-                                        </blockquote>
+                                <div class="card mondeinsectes">
+                                    <div class="hovereffect">
+                                        <img class="card-img-top " src="/images/insecte_3.jpeg " alt="cricket ">
+                                    </div>
+                                    <div class="card-body ">
+                                        <h5 class="card-title ">Les intérêts de l'élevage d'insectes</h5>
+                                        <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum temporibus nobis
+                                            aliquam sed ullam iure laboriosam molestias accusamus facilis a voluptates unde
+                                            sit dignissimos, modi tempora qui cumque molestiae?
+                                        </p>
+                                    </div>
+                                    <div class="card-footer ">
+                                        <small class="text-muted ">Publié le 18 février 2018</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="card commentaires mx-auto" style="max-width: 50rem;">
+                            <div class="card-header">
+                                Commentaires
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-1">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                    <footer class="blockquote-footer">Juliette Bichon
+                                    </footer>
+                                </blockquote>
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer class="blockquote-footer">Juliette Bichon
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
             </section>
             <section id="resa-contact ">
                 <!-- Section Reservation/Contact -->
@@ -363,6 +358,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
         <!-- build:js -->
         <script src="./js/main.js "></script>
+        <script src="./js/sections/section_blog.js"></script>
+
         <!-- endbuild -->
 </body>
 
