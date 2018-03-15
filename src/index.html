@@ -13,7 +13,7 @@
     <!-- build:css -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- endbuild -->
-    <title>BugCookers</title>
+    <title>BugCookers - Restaurant à Lyon</title>
 </head>
 
 <body>
@@ -304,64 +304,85 @@
             </section>
             <section id="resa-contact">
                 <!-- Section Reservation/Contact -->
-                <div class="container-fluid cont1">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="row titleResa">
-                                    <div class="col-12">
-                                        <h2 id="resa">Réservation</h2>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Réservation</h2>
+                            <form id="form-reservation" class="needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" id="name" class="form-control" placeholder="Nom" required>
+                                        <div class="invalid-feedback">
+                                            Un nom est requis.
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <input type="tel" id="phone" class="form-control" placeholder="Téléphone" pattern="0[0-9]{9}" required>
+                                        <div class="invalid-feedback">
+                                            Un numéro de téléphone de 10 chiffres.
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Votre nom" class="form-control name borderForm">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" id="datetimepicker1" class="form-control datetimepicker-input" data-toggle="datetimepicker" data-target="#datetimepicker1"
+                                            placeholder="Date" required>
+                                        <div class="invalid-feedback">
+                                            Une date de réservation est requise.
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Numéro de téléphone" class="form-control phone borderForm">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control datetimepicker-input" id="datetimepicker1" data-toggle="datetimepicker" data-target="#datetimepicker1"
-                                            placeholder="Date de réservation" />
-                                    </div>
-                                    <div class="col-md-6 nbpeople">
-                                        <select class="form-control custom-select">
-                                            <option selected>Nombre de personnes</option>
+                                    <div class="col">
+                                        <select id="resa-select" class="form-control custom-select">
                                             <option value="1">2 personnes</option>
                                             <option value="2">4 personnes</option>
                                             <option value="3">6 personnes</option>
                                             <option value="4">8 personnes</option>
-                                            <option value="5">10 personnes</option>
+                                            <option value="5">Plus de 8</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <textarea name="text" class='form-control preferences' placeholder="Des préférences ? Faites en nous part ici :" rows="10"></textarea>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <button type="submit" id='buttonResa'>Réserver</button>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <textarea name="text" id="message" class='form-control' placeholder="Des préférences ? Faites en nous part ici." rows="10"></textarea>
+                                        <p class="text-center">Pour une réservation de plus de 8 personnes, veuillez nous contacter au
+                                            <br>
+                                            <a href='tel:+33462836394'>04 62 83 63 94</a>
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 justify-content-center map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.7819184575005!2d4.830644015296745!3d45.75551782197878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea52151a1821%3A0x894b76acd79d1555!2s47+Rue+Fran%C3%A7ois+Dauphin%2C+69002+Lyon!5e0!3m2!1sfr!2sfr!4v1520790733292"
-                                    width="500" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
-                            </div>
-                            <!-- <div class="row">
-                                <div class="showMap">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.7819184575005!2d4.830644015296745!3d45.75551782197878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea52151a1821%3A0x894b76acd79d1555!2s47+Rue+Fran%C3%A7ois+Dauphin%2C+69002+Lyon!5e0!3m2!1sfr!2sfr!4v1520790733292"
-                                        width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <div class="form-row text-center">
+                                    <div class="col">
+                                        <button type="submit" id="send-resa">Je réserve une table</button>
+                                    </div>
                                 </div>
-                            </div> -->
-                            <div class="row justify-content-center">
-                                <button id="buttonMap">Nous trouver !</button>
-                            </div>
-                    </form>
+                            </form>
+                        </div>
+                        <div class="col d-none d-sm-block">
+                            <h2>Nous Trouver</h2>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.7819184575005!2d4.830644015296745!3d45.75551782197878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea52151a1821%3A0x894b76acd79d1555!2s47+Rue+Fran%C3%A7ois+Dauphin%2C+69002+Lyon!5e0!3m2!1sfr!2sfr!4v1520790733292"
+                                width="500" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
                     </div>
-
+                </div>
+                <div class="modal fade" id="reservationSentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Réservation</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                Votre demande de réservation à bien été prise en compte.
+                                <br> Merci.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
@@ -374,14 +395,14 @@
                 <div class="col liens">
                     <a href="mailto:contact@bugcookers.fr">contact@bugcookers.fr</a>
                     <span>&bull;</span>
-                    04 11 22 33 44
+                    <a href="tel:+33462836394">04 62 83 63 94</a>
                     <span>&bull;</span>
                     47 Rue François Dauphin
                     <span>&bull;</span>
-                    <a href="">Facebook</a> -
-                    <a href="">Instagram</a> -
-                    <a href="">TripAdvisor</a> -
-                    <a href="">Foodora</a>
+                    <a href="#">Facebook</a> -
+                    <a href="#">Instagram</a> -
+                    <a href="#">TripAdvisor</a> -
+                    <a href="#">Foodora</a>
                 </div>
             </div>
         </footer>
