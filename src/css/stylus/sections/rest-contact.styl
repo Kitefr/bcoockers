@@ -1,123 +1,111 @@
-//Début fomulaire
+#resa-contact
+    background-color: rgb(30,30,30);
+    padding 20px 0
 
-.cont1 {
-  padding: 0;
-  background-color: rgb(30,30,30);
-}
-.row {
-  margin: auto;
-}
-.map {
-  margin-top : 50px !important;
-  }
-.custom-select {
-  border: solid 1px #8f8547;
-  background-color: black !important;
-  color: rgb(170, 170, 170) !important;
-}
-.nbpeople {
-  margin-top: 10px;
-  color: rgb(170, 170, 170) !important;
-  font-family:"Arial";
-}
-.preferences {
-  background-color: black !important;
-  color: rgb(170, 170, 170) !important;
-  font-family:"Arial";
-  border: solid 1px #8f8547;
-  margin-left: 15px;
-  margin-right:15px;
-  }
-.phone {
-  color: rgb(170, 170, 170) !important;
-  font-family: "Arial";
-  }
-.name {
-  margin-top: 60px;
-  color: rgb(170, 170, 170) !important;
-  font-family: "Arial";
-  }
+    input, textarea, select
+        background-color $color-black
+        color: $color-gold
+        font-family $font-fancy
+        font-size 1.2rem
+        border 1px solid darken($color-gold, 40%)
+        outline none
+        margin-top 10px
 
-.borderForm {
-  background-color: black !important;
-  height: 38px;
-  border: solid 1px #8f8547;
-  border-radius: 3px;
-  margin-top: 10px;
-}
-.preferences {
-  margin-top: 10px;
-}
-#buttonMap {
-  display: none;
-}
-#buttonResa {
-  height :  60px;
-  width: 150px;
-  margin-top: 30px;
-  border: solid 1px #8f8547;
-  border-radius:  10px;
-  font-size: 20px;
-  font-family: "Poiret One";
-  color: #8f8547;
-  background-color: black;
-  float: right;
-  }
-#buttonResa:hover {
-  color: black;
-  background-color: #8f8547;
-  border: solid 1px black;
-  }
+        &:focus
+            border 1px solid $color-gold
+            outline none
+            box-shadow none
 
-#datetimepicker1{
-  background-color: black;
-  height: 38px;
-  border: solid 1px #8f8547;
-  border-radius: 3px;
-  margin-top: 10px;
-  color: rgb(170, 170, 170) !important;
-  font-family: "Arial";
-  }
-#resa {
-  border-bottom: solid 1px #8f8547;
-  font-family: "Poiret One";
-  font-size: 40px;
-  color: white;
-}
+        &:focus::placeholder
+            color darken($color-white, 60%)
+            
+        &::placeholder
+            color darken(white, 35%)
 
-@media screen and (max-width: 768px) {
-  .borderForm {
-    height: 50px;
-    margin-top: 10px;
-  }
-#buttonMap {
-  height: 60px;
-  width: 200px;
-  border-radius: 5px;
-  margin-top: 40px;
-  display: initial;
-  border: solid 1px #8f8547;
-  border-radius:  10px;
-  font-size: 20px;
-  font-family: "Poiret One";
-  color: #8f8547;
-  background-color: black;
-  }
-  #datetimepicker1{
-    height: 50px;
-    margin-top: 10px;
-    }
-  .nbpeople {
-    margin-top: 10px;
-  }
-  .map {
-    display: none;
-    margin-bot: 100px;
-  }
- }
+    #name, #phone
+        margin-top 0
 
+    select
+        height 42px
 
+    textarea
+        resize none
+        margin-bottom 20px
 
+    p
+        color darken(white, 35%)
+        font-family $font-fancy
+        font-size 1.2rem
+        margin 25px 0
+        height 274px 
 
+        a
+            color $color-gold
+            font-size 1.5rem
+            line-height 50px
 
-//Fin formulaire
+    button[type=submit]
+        padding 8px 14px
+        border 1px solid darken($color-gold, 40%)
+        border-radius 10px
+        font-size 1.3rem
+        font-family $font-fancy
+        color $color-gold
+        background-color $color-black
+        cursor pointer
+
+        &:disabled 
+            color gray
+            border 1px solid gray
+            cursor default
+
+            &:hover
+                border 1px solid gray
+
+        &:hover
+            border 1px solid $color-gold
+
+        &:focus
+            border 1px solid $color-gold
+            outline none
+            box-shadow none
+
+    iframe
+        width 100%
+        height 397px
+
+    .invalid-feedback
+        padding 5px 5px
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4)
+        font-size 0.9rem
+
+//   @media screen and (max-width: 768px) {
+//     .borderForm {
+//       height: 50px;
+//       margin-top: 10px;
+//     }
+//     #buttonMap {
+//       height: 60px;
+//       width: 200px;
+//       border-radius: 5px;
+//       margin-top: 40px;
+//       display: initial;
+//       border: solid 1px #8f8547;
+//       border-radius:  10px;
+//       font-size: 20px;
+//       font-family: "Poiret One";
+//       color: #8f8547;
+//       background-color: black;
+//     }
+//     #datetimepicker1{
+//       height: 50px;
+//       margin-top: 10px;
+//     }
+//     .nbpeople {
+//       margin-top: 10px;
+//     }
+//     .map {
+//       display: none;
+//       margin-bot: 100px;
+//     }
+//   }

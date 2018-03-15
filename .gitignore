@@ -69,5 +69,5 @@ typings/
 
 # Project
 dist/
-src/js/main.js
 src/css/style.css
+src/js/main.js
