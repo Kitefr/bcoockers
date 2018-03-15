@@ -83,11 +83,10 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
 }
 #blog .card-img-top {
   width: 100%;
-  height: 45%;
   overflow: hidden;
 }
 #blog .card-body {
-  height: 8rem;
+  height: 10rem;
   overflow: hidden;
   padding-bottom: 50px;
   background-color: #f9f9f9;
@@ -106,25 +105,6 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
 #blog .nav-pills .nav-link.active {
   background-color: #8f8547;
 }
-#blog .hovereffect {
-  width: 100%;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-}
-#blog .hovereffect img {
-  display: block;
-  position: relative;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-}
-#blog .hovereffect:hover img {
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
 #blog .media img {
   overflow: hidden;
   border-radius: 50px;
@@ -137,11 +117,42 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
 #blog .comments {
   font-size: 14px;
   color: #4a4949;
+  margin-bottom: 0;
 }
 #blog .nom-client {
   color: #808080;
   font-size: 13px;
   font-style: italic;
+  text-align: left;
+}
+.hovereffect {
+  width: 100%;
+  overflow: hidden;
+}
+.hovereffect img {
+  display: block;
+  transition: all 0.4s linear;
+}
+.hovereffect:hover img {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 576px) {
+  #blog .card-deck .card {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  #blog .media {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  #blog .media img {
+    display: block;
+    margin-left: 25%;
+    margin-bottom: 15px;
+  }
 }
 /*
  * Temporaire.
