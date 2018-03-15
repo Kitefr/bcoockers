@@ -3,6 +3,9 @@ Les fichiers styl se transformeront en un seul fichier css.
 ---
 VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
 */
+body {
+  overflow-x: hidden;
+}
 section:hover h2 {
   color: #ccc;
   border-left: 5px solid #a39852;
@@ -227,6 +230,117 @@ h2 {
 }
 body.menu-opened {
   overflow: hidden !important;
+}
+#blog {
+  background-color: #202020;
+}
+#blog h2 {
+  font-family: "Poiret One";
+  font-size: 40px;
+  color: #fff;
+  padding-top: 20px;
+}
+#blog h5 {
+  font-family: $Arial;
+  font-size: 18px;
+  color: #000;
+}
+#blog p {
+  font-family: $Arial;
+  font-size: 14px;
+  color: #000;
+  white-space: initial;
+  text-overflow: fade;
+}
+#blog a {
+  color: #fff;
+}
+#blog .container-cards {
+  background-color: #202020;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+#blog .card-deck .card {
+  border-color: #8f8547;
+}
+#blog .card-img-top {
+  width: 100%;
+  overflow: hidden;
+}
+#blog .card-body {
+  height: 11rem;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+#blog .card-footer {
+  padding: 10px;
+  background-color: #e4e3e3;
+  display: flex;
+  justify-content: space-between;
+}
+#blog .text-muted {
+  padding-top: 6px;
+}
+#blog .reseaux-sociaux {
+  font-size: 20px;
+}
+#blog .nav-link {
+  color: #fff;
+  margin-bottom: 20px;
+  border: 1px solid #8f8547;
+  margin-left: 1rem;
+}
+#blog .nav-pills .nav-link.active {
+  background-color: #8f8547;
+}
+#blog .media img {
+  overflow: hidden;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+}
+#blog .media {
+  margin: 20px 20px;
+}
+#blog .comments {
+  font-size: 14px;
+  color: #4a4949;
+  margin-bottom: 0;
+}
+#blog .nom-client {
+  color: #808080;
+  font-size: 13px;
+  font-style: italic;
+  text-align: left;
+}
+.hovereffect {
+  width: 100%;
+  overflow: hidden;
+}
+.hovereffect img {
+  display: block;
+  transition: all 0.4s linear;
+}
+.hovereffect:hover img {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 576px) {
+  #blog .card-deck .card {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  #blog .media {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  #blog .media img {
+    display: block;
+    margin-left: 25%;
+    margin-bottom: 15px;
+  }
 }
 .container-fluid {
   padding: 0px;
