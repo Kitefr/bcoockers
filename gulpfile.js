@@ -116,7 +116,7 @@ gulp.task("watch", ["server"], () => {
 // What we will user
 
 gulp.task("default", () => {
-    runSequence("css", "watch", () => {});
+    runSequence(["css", "js"], "watch", () => {});
 });
 
 gulp.task("build", () => {
