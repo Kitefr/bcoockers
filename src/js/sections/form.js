@@ -52,7 +52,6 @@ $(document).ready(function() {
         const message = $("textarea#message");
         const p = message.next();
         const btn = $("#send-resa");
-        console.log(btn);
 
         if (this.value == 5) {
             message.hide();
@@ -63,6 +62,19 @@ $(document).ready(function() {
             p.hide();
             btn.attr("disabled", false);
         }
+    });
+
+    // On modal close, clear
+    $("#reservationSentModal").on("hidden.bs.modal", function(e) {
+        $("#form-reservation")
+            .find("input,textarea")
+            .val("")
+            .end()
+            .find("select")
+            .val(1)
+            .end();
+
+        $("#form-reservation").removeClass("was-validated");
     });
 });
 
