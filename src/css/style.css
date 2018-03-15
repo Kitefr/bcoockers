@@ -3,38 +3,106 @@ Les fichiers styl se transformeront en un seul fichier css.
 ---
 VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
 */
+section:hover h2 {
+  color: #ccc;
+  border-left: 5px solid #a39852;
+  border-bottom: 1px solid #a39852;
+}
+h2 {
+  font-family: "Poiret One";
+  color: #999;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 30px;
+  border-left: 5px solid #7a723d;
+  border-bottom: 1px solid #7a723d;
+  padding: 5px 20px;
+}
 #site-container > footer {
   font-family: "Poiret One";
   background-color: #000;
   color: #fff;
-}
-#site-container > footer .row > .col {
-  margin: 10px 8px;
+  border-top: 1px solid #bbb277;
+  padding: 20px 0;
+  overflow: hidden;
+  text-align: center;
 }
 #site-container > footer .logo {
-  fill: #cecece;
-}
-#site-container > footer h3 {
-  color: #cecece;
-  font-size: 1.5rem;
-  margin-top: 8px;
-  padding-bottom: 5px;
   text-align: center;
-  border-bottom: 1px solid #8f8547;
+  margin-bottom: 15px;
+}
+#site-container > footer .logo img {
+  max-width: 160px;
+  opacity: 0.8;
+}
+#site-container > footer .liens {
+  font-family: Arial, "Sans Serif";
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+#site-container > footer .liens span {
+  color: #bbb277;
+}
+#site-container > footer .liens a {
+  color: #b3b3b3;
+}
+#site-container > footer .liens a:hover {
+  color: #bbb277;
 }
 #site-container > header {
   height: 50px;
+  overflow: hidden;
   font-family: "Poiret One";
+}
+@media screen and (min-width: 576px) {
+  #site-container > header {
+    height: 68px;
+  }
 }
 @media screen and (min-width: 768px) {
   #site-container > header {
     height: 80px;
   }
 }
+#site-container > header .logo {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  z-index: 40;
+}
+@media screen and (min-width: 576px) {
+  #site-container > header .logo {
+    height: 68px;
+  }
+}
+#site-container > header .logo img {
+  height: 30px;
+  margin-top: 13px;
+  width: auto;
+}
+@media screen and (min-width: 576px) {
+  #site-container > header .logo img {
+    height: 40px;
+    margin-top: 18px;
+  }
+}
 #site-container > header nav.navbar {
   background-color: #bbb277 !important;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+@media screen and (min-width: 576px) {
+  #site-container > header nav.navbar {
+    height: 68px;
+  }
 }
 @media screen and (min-width: 768px) {
+  #site-container > header nav.navbar {
+    font-size: 1.6rem;
+    height: 80px;
+  }
+}
+@media screen and (min-width: 992px) {
   #site-container > header nav.navbar {
     font-size: 1.8rem;
   }
@@ -42,12 +110,123 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
     margin: 0 10px;
   }
   #site-container > header nav.navbar ul li a {
-    font-weight: normal;
-    transition: all 0.3s;
+    color: #000;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
   }
   #site-container > header nav.navbar ul li a:hover {
-    font-weight: bold;
+    opacity: 1;
   }
+}
+#site-container > header #menu-icon {
+  width: 28px;
+  height: 45px;
+  position: absolute;
+  margin: 10px 0 0 15px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 50;
+}
+@media screen and (min-width: 576px) {
+  #site-container > header #menu-icon {
+    margin: 10px 0 0 20px;
+    width: 32px;
+    height: 45px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #site-container > header #menu-icon {
+    margin: 10px 0 0 26px;
+    display: none;
+  }
+}
+#site-container > header #menu-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+#site-container > header #menu-icon span:nth-child(1) {
+  top: 0px;
+}
+#site-container > header #menu-icon span:nth-child(2),
+#site-container > header #menu-icon span:nth-child(3) {
+  top: 10px;
+}
+#site-container > header #menu-icon span:nth-child(4) {
+  top: 20px;
+}
+#site-container > header #menu-icon.open span:nth-child(1) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+}
+#site-container > header #menu-icon.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+#site-container > header #menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+#site-container > header #menu-icon.open span:nth-child(4) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+}
+#site-container > header #navbar-mobile {
+  top: 0;
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 1;
+  display: none;
+}
+#site-container > header #navbar-mobile.show {
+  display: block;
+}
+#site-container > header #navbar-mobile ul {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+#site-container > header #navbar-mobile ul li {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #524c29;
+}
+#site-container > header #navbar-mobile ul li:last-child {
+  border-bottom: none;
+}
+#site-container > header #navbar-mobile ul li a {
+  color: #999;
+}
+#site-container.menu-opened nav.navbar {
+  background-color: transparent !important;
+}
+#site-container.menu-opened #menu-icon span {
+  background-color: #b1a663;
+  opacity: 0.8;
+}
+#site-container.menu-opened #navbar-mobile {
+  display: block;
+}
+#site-container.menu-opened .logo {
+  opacity: 0.7;
+}
+body.menu-opened {
+  overflow: hidden !important;
 }
 .container-fluid {
   padding: 0px;
@@ -171,4 +350,188 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
 }
 #concept .paddingCol {
   padding: 0;
+}
+#nos-burgers {
+  background-color: #000;
+  padding: 20px 0;
+}
+#nos-burgers small {
+  font-size: 16px;
+}
+#nos-burgers .marginTopCard {
+  margin-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+#nos-burgers .card {
+  border: solid 1px #8f8547;
+}
+#nos-burgers .card-title {
+  font-family: "Poiret One";
+}
+#nos-burgers .card-body {
+  background-color: #fefee2;
+  font-family: "Arial";
+  color: #000;
+}
+#nos-burgers .card-footer {
+  background-color: #000;
+  color: #8f8547;
+}
+.justifyRowCard {
+  justify-content: center;
+  padding-top: 20px;
+}
+.card4Hover {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+}
+.card3Hover {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+}
+.card2Hover {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+}
+.card1Hover {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+}
+.priceBurgerAlone {
+  float: right;
+  margin-top: 0px;
+}
+.btn {
+  background-color: #000;
+  font-family: "Poiret one";
+  color: #fff !important;
+  border-color: #8f8547;
+  justify-items: center;
+}
+.buttonsCard {
+  display: inline-flex;
+  background-color: #fefee2;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.showMap {
+  position: absolute;
+  display: inline;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+#titleNosBurgers {
+  font-family: "Poiret One";
+  font-size: 40px;
+  border-bottom: solid 1px #8f8547;
+  color: #fff;
+  float: right;
+}
+#resa-contact {
+  background-color: #1e1e1e;
+  padding: 20px 0;
+}
+#resa-contact input,
+#resa-contact textarea,
+#resa-contact select {
+  background-color: #000;
+  color: #bbb277;
+  font-family: "Poiret One";
+  font-size: 1.2rem;
+  border: 1px solid #7a723d;
+  outline: none;
+  margin-top: 10px;
+}
+#resa-contact input:focus,
+#resa-contact textarea:focus,
+#resa-contact select:focus {
+  border: 1px solid #bbb277;
+  outline: none;
+  box-shadow: none;
+}
+#resa-contact input:focus::placeholder,
+#resa-contact textarea:focus::placeholder,
+#resa-contact select:focus::placeholder {
+  color: #666;
+}
+#resa-contact input::placeholder,
+#resa-contact textarea::placeholder,
+#resa-contact select::placeholder {
+  color: #a6a6a6;
+}
+#resa-contact #name,
+#resa-contact #phone {
+  margin-top: 0;
+}
+#resa-contact select {
+  height: 42px;
+}
+#resa-contact textarea {
+  resize: none;
+  margin-bottom: 20px;
+}
+#resa-contact p {
+  color: #a6a6a6;
+  font-family: "Poiret One";
+  font-size: 1.2rem;
+  margin: 25px 0;
+  height: 274px;
+}
+#resa-contact p a {
+  color: #bbb277;
+  font-size: 1.5rem;
+  line-height: 50px;
+}
+#resa-contact button[type=submit] {
+  padding: 8px 14px;
+  border: 1px solid #7a723d;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-family: "Poiret One";
+  color: #bbb277;
+  background-color: #000;
+  cursor: pointer;
+}
+#resa-contact button[type=submit]:disabled {
+  color: #808080;
+  border: 1px solid #808080;
+  cursor: default;
+}
+#resa-contact button[type=submit]:disabled:hover {
+  border: 1px solid #808080;
+}
+#resa-contact button[type=submit]:hover {
+  border: 1px solid #bbb277;
+}
+#resa-contact button[type=submit]:focus {
+  border: 1px solid #bbb277;
+  outline: none;
+  box-shadow: none;
+}
+#resa-contact iframe {
+  width: 100%;
+  height: 397px;
+}
+#resa-contact .invalid-feedback {
+  padding: 5px 5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  font-size: 0.9rem;
 }
