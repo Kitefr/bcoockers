@@ -52,7 +52,7 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
 #blog {
   background-color: #202020;
 }
-#blog h1 {
+#blog h2 {
   font-family: "Poiret One";
   font-size: 40px;
   color: #fff;
@@ -86,15 +86,21 @@ VEUILLEZ NE PAS MODIFIER CE FICHIER. MERCI.
   overflow: hidden;
 }
 #blog .card-body {
-  height: 10rem;
+  height: 11rem;
   overflow: hidden;
-  padding-bottom: 50px;
   background-color: #f9f9f9;
 }
 #blog .card-footer {
-  padding: 8px;
-  background-color: #202020;
-  border: 0.5px solid #8f8547;
+  padding: 10px;
+  background-color: #e4e3e3;
+  display: flex;
+  justify-content: space-between;
+}
+#blog .text-muted {
+  padding-top: 6px;
+}
+#blog .reseaux-sociaux {
+  font-size: 20px;
 }
 #blog .nav-link {
   color: #fff;
