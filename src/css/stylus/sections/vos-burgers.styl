@@ -1,0 +1,46 @@
+#vos-burgers
+    padding 20px 0
+    color $color-white
+
+    .row
+        margin 0
+
+    .left-part
+        img
+            width 100%
+            max-width 700px
+            border-radius 15px
+            margin-bottom 30px
+        
+        p
+            font-family $font-fancy
+            font-size 1.8rem
+
+        button#send-order
+            font-size 1.6rem
+    
+    .right-part
+        .row
+            margin 20px 0
+
+            &:first-child
+                margin-top 0
+
+        button
+            padding 0
+            background-color lighten($color-black, 70%)
+            margin-bottom 10px
+
+            &:hover, &.active
+                background-color $color-gold
+
+        p
+            text-align: center
+            font-family $font-fancy
+            font-size 1.4rem
+
+            &.active
+                color $color-gold
+        img
+            width 82px
+            height 82px
