@@ -18,4 +18,16 @@ $(document).ready(function() {
         $("body").removeClass("menu-opened");
         $("#menu-icon").removeClass("open");
     });
+
+    $("#site-container header a.nav-link").click(function() {
+        const section = $(this).attr("href");
+
+        $("html, body").animate(
+            {
+                scrollTop: $(section).offset().top
+            },
+            1000
+        );
+        return true;
+    });
 });
