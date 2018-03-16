@@ -1,4 +1,8 @@
 // style partie Concept
+#concept
+  .row
+    margin: 0;
+
 #concept .img-thumbnail {
   border: none;
   width: 100%;
@@ -18,6 +22,7 @@
   cursor: default;
   display: flex;
 }
+/*
 #concept .hovereffect .overlay {
   height: 100%;
   width: 100%;
@@ -29,7 +34,19 @@
   transition: all 0.4s ease-in-out;
   overflow: hidden;
 }
-
+*/
+#concept .hovereffect .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  display:flex;
+  flex-direction : column;
+  justify-content: center;
+  justify-content: center;
+} 
 #concept .hovereffect img {
   display: block;
   position: relative;
@@ -43,15 +60,21 @@
   font-family: Poiret One;
   text-transform: uppercase;
   color: #fff;
+  /*
   text-align: center;
   position: relative;
+   */
   font-size: 18px;
-  -webkit-transform: translatey(100px);
-  -ms-transform: translatey(100px);
   transform: translatey(100px);
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   padding: 10px;
+}
+@media screen and (max-width: 576px) {
+  #concept .hovereffect h3  {
+    font-size: 13px;
+    margin-top: 0px;
+    padding-top:30px;
+    }
 }
 /* en savoir plus */
 #concept .hovereffect p.info {
@@ -70,6 +93,13 @@
   padding: 7px 14px;
 }
 
+@media screen and (max-width: 576px) {
+#concept .hovereffect p.info  {
+    font-size: 10px;
+    padding: 5px 5px;
+     margin-top: -12px;
+    }
+}
 #concept .hovereffect p.info:hover {
   box-shadow: 0 0 1px #fff;
 }
