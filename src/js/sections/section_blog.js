@@ -14,3 +14,8 @@ $("#comments").click(function() {
 });
 
 $("#recipes").click();
+
+$("#blog a.nav-link").click(function() {
+  $("#blog .nav-link").removeClass("active");
+  $(this).addClass("active");
+});
