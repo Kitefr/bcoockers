@@ -20,8 +20,8 @@ gulp.task("html:build", () => {
         .pipe(plumber())
         .pipe(
             replace({
-                css: "style.min.css",
-                js: "main.min.js"
+                css: "./css/style.min.css",
+                js: "./js/main.min.js"
             })
         )
         .pipe(gulp.dest("./dist/"));
@@ -51,7 +51,7 @@ gulp.task("css:build", ["css"], () => {
         .pipe(plumber())
         .pipe(postcss(plugins))
         .pipe(rename("style.min.css"))
-        .pipe(gulp.dest("./dist/assets/css/"));
+        .pipe(gulp.dest("./dist/css/"));
 });
 
 gulp.task("js", () => {
@@ -78,7 +78,7 @@ gulp.task("images:build", () => {
         .src("./src/images/**/*.+(png|jpg|jpeg|svg)")
         .pipe(plumber())
         .pipe(imagemin())
-        .pipe(gulp.dest("./dist/assets/images"));
+        .pipe(gulp.dest("./dist/images"));
 });
 
 gulp.task("fonts", () => {
