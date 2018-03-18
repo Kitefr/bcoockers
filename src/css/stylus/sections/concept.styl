@@ -1,0 +1,135 @@
+// style partie Concept
+#concept
+  .row
+    margin: 0;
+
+#concept .img-thumbnail {
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+#concept .container-fluid {
+  width: 100%;
+  height: 100%;
+}
+#concept .hovereffect {
+  float: center;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  display: flex;
+}
+/*
+#concept .hovereffect .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+*/
+#concept .hovereffect .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  display:flex;
+  flex-direction : column;
+  justify-content: center;
+  justify-content: center;
+} 
+#concept .hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  overflow: hidden;
+}
+/* titre */
+#concept .hovereffect h3 {
+  margin-top: 150px;
+  font-family: Poiret One;
+  text-transform: uppercase;
+  color: #fff;
+  /*
+  text-align: center;
+  position: relative;
+   */
+  font-size: 18px;
+  transform: translatey(100px);
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+}
+@media screen and (max-width: 576px) {
+  #concept .hovereffect h3  {
+    font-size: 13px;
+    margin-top: 0px;
+    padding-top:30px;
+    }
+}
+/* en savoir plus */
+#concept .hovereffect p.info {
+  font-family: Poiret One;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  border: 0, 8px solid #fff;
+  background-color: transparent;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 15%;
+  padding: 7px 14px;
+}
+
+@media screen and (max-width: 576px) {
+#concept .hovereffect p.info  {
+    font-size: 10px;
+    padding: 5px 5px;
+     margin-top: -12px;
+    }
+}
+#concept .hovereffect p.info:hover {
+  box-shadow: 0 0 1px #fff;
+}
+
+#concept .hovereffect:hover img {
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  overflow: hidden;
+}
+
+#concept .hovereffect:hover .overlay {
+  opacity: 0.93;
+  background-color: rgb(187, 178, 119);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+#concept .hovereffect:hover h3,
+.hovereffect:hover p.info {
+  opacity: 1;
+  transform: translatey(0);
+}
+
+#concept .hovereffect:hover p.info {
+  transition-delay: 0.2s;
+}
+#concept .paddingCol {
+  padding: 0;
+}
