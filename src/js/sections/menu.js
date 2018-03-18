@@ -20,7 +20,7 @@ $(document).ready(function() {
     });
 
     $("#site-container header a.nav-link").click(function() {
-        const section = $(this).attr("href");
+        var section = $(this).attr("href");
 
         $("html, body").animate(
             {

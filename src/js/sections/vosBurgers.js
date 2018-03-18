@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    let num = 0;
+    var num = 0;
 
     $("#icons-vos-burgers button").click(function() {
-        const orderBtn = $("#send-order");
+        var orderBtn = $("#send-order");
 
         if ($(this).hasClass("active")) {
             num -= 1;

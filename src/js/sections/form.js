@@ -5,25 +5,23 @@
         "load",
         function() {
             // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            let forms = document.getElementsByClassName("needs-validation");
+            var formulaire = document.querySelector(".needs-validation");
             // Loop over them and prevent submission
-            let validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener(
-                    "submit",
-                    function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        } else {
-                            event.preventDefault();
-                            event.stopPropagation();
-                            $("#reservationSentModal").modal();
-                        }
-                        form.classList.add("was-validated");
-                    },
-                    false
-                );
-            });
+            formulaire.addEventListener(
+                "submit",
+                function(event) {
+                    if (formulaire.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        $("#reservationSentModal").modal();
+                    }
+                    formulaire.classList.add("was-validated");
+                },
+                false
+            );
         },
         false
     );
@@ -33,12 +31,18 @@
 $(document).ready(function() {
     // Capitilize first letter on Name change
     $("#form-reservation #name").change(function() {
-        let values = $(this)
+        var values = $(this)
             .val()
             .split(" ");
 
         $(this).val(
-            values.map(x => x.replace(/\b\w/g, l => l.toUpperCase())).join(" ")
+            values
+                .map(function(x) {
+                    x.replace(/\b\w/g, function(l) {
+                        l.toUpperCase();
+                    });
+                })
+                .join(" ")
         );
     });
 
@@ -49,9 +53,9 @@ $(document).ready(function() {
 
     // Chow on change
     $("#resa-select").change(function() {
-        const message = $("textarea#message");
-        const p = message.next();
-        const btn = $("#send-resa");
+        var message = $("textarea#message");
+        var p = message.next();
+        var btn = $("#send-resa");
 
         if (this.value == 5) {
             message.hide();
